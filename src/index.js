@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import Navigator from './nav';
+import { colors } from './utilities';
 
 const App = () => {
     return (
@@ -19,7 +20,7 @@ const App = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white'
+        backgroundColor: colors.WHITE
     }
 });
 
