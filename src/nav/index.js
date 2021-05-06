@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Screens from '../screens';
 import { strings } from '../utilities';
 
-const { ContactsScreen } = Screens;
+const { ContactsScreen, ContactDetailsScreen } = Screens;
 const Stack = createStackNavigator();
 
 const Navigator = () => {
@@ -15,7 +15,13 @@ const Navigator = () => {
                 <Stack.Screen
                     name={ContactsScreen.name}
                     component={ContactsScreen.screen}
-                    options={{ title: strings.contacts_screen_title }} />
+                    options={{ title: strings.contacts_screen_title }}
+                />
+                <Stack.Screen
+                    name={ContactDetailsScreen.name}
+                    component={ContactDetailsScreen.screen}
+                    options={{ headerBackTitle: strings.back_button_title }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -3,6 +3,7 @@ import { View, StyleSheet, FlatList } from 'react-native';
 
 import ContactLine from '../../components/contactLine';
 import ListSeperator from '../../components/listSeperator';
+import { navigateToContactDetails } from '../../nav/actions';
 import { colors } from '../../utilities';
 
 const INITIAL_AMOUNT_TO_LOAD = 10;
@@ -32,7 +33,7 @@ const ContactsScreen = ({ navigation }) => {
     }
 
     const handleOnPress = (item) => {
-        console.log({ item })
+        navigation.dispatch(navigateToContactDetails(item));
     }
 
     return (
@@ -42,7 +43,6 @@ const ContactsScreen = ({ navigation }) => {
                 renderItem={renderItem}
                 keyExtractor={(item) => item?.login?.uuid}
                 ItemSeparatorComponent={ListSeperator}
-
             />
         </View>
     )
