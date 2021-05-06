@@ -1,0 +1,1 @@
+export const contacts_screen_title = 'Randomize me!';

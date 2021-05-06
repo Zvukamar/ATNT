@@ -5,10 +5,13 @@ import {
     StyleSheet,
 } from 'react-native';
 
+import Navigator from './nav';
+
 const App = () => {
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle={'dark-content'} />
+            <Navigator />
         </SafeAreaView>
     );
 };
