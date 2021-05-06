@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, ScrollView } from 'react-native';
 
 import IText from '../../components/IText';
 import Location from '../../components/location';
@@ -15,7 +15,7 @@ const ContactDetailsScreen = ({ navigation, route }) => {
     }, []);
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Image
                 resizeMode='contain'
                 style={styles.image}
@@ -28,7 +28,7 @@ const ContactDetailsScreen = ({ navigation, route }) => {
 
             <IText textStyle={styles.text}>{strings.address_phone}{phone}</IText>
             <IText textStyle={styles.text}>{strings.address_cell}{cell}</IText>
-        </View>
+        </ScrollView>
     )
 }
 
