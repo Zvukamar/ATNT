@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 });
 
 Location.propTypes = {
-    street: PropTypes.objectOf({
+    street: PropTypes.shape({
         number: PropTypes.oneOfType([
             PropTypes.number,
             PropTypes.string
@@ -56,12 +56,8 @@ Location.propTypes = {
         PropTypes.number,
         PropTypes.string
     ]),
-    coordinates: PropTypes.objectOf({
+    coordinates: PropTypes.shape({
         latitude: PropTypes.string,
         longitude: PropTypes.string
-    }),
-    coordinates: PropTypes.objectOf({
-        offset: PropTypes.string,
-        description: PropTypes.string
     })
 }
